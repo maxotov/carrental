@@ -1,0 +1,175 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.info, .success, .warning, .error, .validation {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 64px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-align: center;
+}
+
+.info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('/image/icon_info.png');
+}
+
+.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('/image/icon_success.png');
+}
+
+.warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('/image/icon_warning.png');
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('/image/icon_error.png');
+}
+
+.login {
+    width: 500px;
+    height: 150;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin-left: -250px;
+    margin-top: -50px;
+    text-align: center;
+    display: inline-block;
+    background: rgba(78, 156, 175, 0.23);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.register {
+    width: 500px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin-left: -250px;
+    margin-top: -50px;
+    text-align: center;
+    display: inline-block;
+    background: rgba(78, 156, 175, 0.23);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    background: #512DA8;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover{
+    background: #FF4081;
+}
+
+.list {
+    display: inline-block;
+    background: #4E9CAF;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.list:hover{
+    background: rgba(55, 73, 255, 0.88);
+}
+
+.input {
+    display: inline-block;
+    background: #512DA8;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.input:hover{
+    background: #FF4081;
+}
+
+.order_prepare {
+    display: inline-block;
+    background: rgba(78, 156, 175, 0.23);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.order_view {
+     display: inline-block;
+     background: rgba(78, 156, 175, 0.23);
+     padding: 10px;
+     text-align: center;
+     border-radius: 5px;
+ }
+
+.order_view_all {
+    display: inline-block;
+    background: rgba(78, 156, 175, 0.23);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.order_view_all:hover{
+    background: rgba(55, 73, 255, 0.89);
+}
+
+.car {
+    display: block;
+    background: rgba(78, 156, 175, 0.23);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.car:hover{
+    background: rgba(55, 73, 255, 0.89);
+}
+
+.delete_access {
+    background-image: url('/image/icon_button_delete_small.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    width: 24px;
+    border: 0px;
+    padding: 3px 0 10px 0;
+    cursor: pointer;
+    font-family: Tahoma;
+    font-size: 11px;
+}
+.contact_div{
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 64px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-align: center;
+
+}
+
+.contact_div{
+    color: #9F6000;
+    background-color: #FEEFB3;
+}

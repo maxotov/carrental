@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <servlet>
+        <servlet-name>controller</servlet-name>
+        <servlet-class>kz.project.carrental.servlet.Controller</servlet-class>
+
+        <init-param>
+            <param-name>log4j-xml-location</param-name>
+            <param-value>WEB-INF\classes\resource\log4j.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-properties-location</param-name>
+            <param-value>WEB-INF\classes\resource\config.properties</param-value>
+        </init-param>
+
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>controller</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ActionServlet</servlet-name>
+        <servlet-class>kz.project.carrental.servlet.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>log4j-xml-location</param-name>
+            <param-value>WEB-INF\classes\resource\log4j.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-properties-location</param-name>
+            <param-value>WEB-INF\classes\resource\config.properties</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ActionServlet</servlet-name>
+        <url-pattern>/actionservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCarServlet</servlet-name>
+        <servlet-class>kz.project.carrental.servlet.AddCarServlet</servlet-class>
+        <init-param>
+            <param-name>log4j-xml-location</param-name>
+            <param-value>WEB-INF\classes\resource\log4j.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config-properties-location</param-name>
+            <param-value>WEB-INF\classes\resource\config.properties</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddCarServlet</servlet-name>
+        <url-pattern>/addcarservlet</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>kz.project.carrental.listener.LogoutListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>userFilter</filter-name>
+        <filter-class>kz.project.carrental.filter.UserFilter</filter-class>
+        <init-param>
+            <param-name>actionNames</param-name>
+            <param-value>order_prepare,user_view,order_change_status,order_delete,order_send,order_view,order_view_all
+            </param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>userFilter</filter-name>
+        <servlet-name>controller</servlet-name>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>userFilter</filter-name>
+        <servlet-name>ActionServlet</servlet-name>
+    </filter-mapping>
+
+    <filter>
+
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>kz.project.carrental.filter.EncodingFilter</filter-class>
+
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <error-page>
+        <location>/jsp/error.jsp</location>
+    </error-page>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
